@@ -55,7 +55,11 @@ public class ASCIIPaint {
      * for any cell that is outside the image's bounds.
      */
     public static void zoom(char[][] image, int row, int col) {
-    	        
+    	for(int i=0;i<=row;i++){
+    		for(int j=0;j>=col;j++){
+    			System.out.println(image[i+1][j]);
+    		}
+    	}
     }
 
     /**
@@ -85,9 +89,9 @@ public class ASCIIPaint {
         int col;    //|- command parameters
         char brush; //|
         //The initial image source. Edit this to create some holes (or change its size).
-        String strImage = "####################\n" +
-                          "####################\n" +
-                          "####################\n" +
+        String strImage = "*****###############\n" +
+                          "*****###############\n" +
+                          "*****###############\n" +
                           "####################\n" +
                           "####################\n" +
                           "####################\n" +
@@ -109,7 +113,7 @@ public class ASCIIPaint {
                 	displayImage(image);
                 	break;
                 case CMD_ZOOM:
-                	zoom(image, 5, 5);
+                	zoom(image, 0, 5);
                 	break;
                 case CMD_FILL: 
                 case CMD_LOAD:  
